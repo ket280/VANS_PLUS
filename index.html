@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANSPLUS - Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css"> 
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">VANSPLUS</a></h1>
+                </div>
+                
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="index.html" class="active">Accueil</a></li>
+                        <li><a href="shop.html">Boutique</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-icons">
+                    <span class="icon">🔍</span>
+                    <span class="icon">❤️<span class="badge" id="wishlist-count">0</span></span>
+                    <span class="icon">👤</span>
+                    <a href="cart.html" class="icon">
+                        🛒<span class="badge" id="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="animate-slide-up">Collection Printemps 2025</h2>
+            <p class="animate-slide-up">Découvrez nos dernières tendances mode</p>
+            <a href="shop.html" class="btn btn-primary animate-fade-in">Voir la Collection</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>Livraison Gratuite</h3>
+                    <p>Sur toutes les commandes de plus de 50€</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Retours Faciles</h3>
+                    <p>30 jours pour changer d'avis</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💳</div>
+                    <h3>Paiement Sécurisé</h3>
+                    <p>Protection complète de vos données</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catégories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Nos Catégories</h2>
+            <div class="category-grid">
+                <a href="shop.html?category=shoes" class="category-card">
+                    <div class="category-icon">👟</div>
+                    <h3>Chaussures</h3>
+                </a>
+                <a href="shop.html?category=clothes" class="category-card">
+                    <div class="category-icon">👕</div>
+                    <h3>Vêtements</h3>
+                </a>
+                <a href="shop.html?category=accessories" class="category-card">
+                    <div class="category-icon">🎒</div>
+                    <h3>Accessoires</h3>
+                </a>
+                <a href="shop.html?category=sale" class="category-card">
+                    <div class="category-icon">🏷️</div>
+                    <h3>Promotions</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produits Populaires -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Produits Populaires</h2>
+            <div class="product-grid" id="featured-products"></div>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="shop.html" class="btn btn-primary">Voir Tous les Produits</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Inscrivez-vous à notre Newsletter</h2>
+                <p>Recevez nos dernières offres et nouveautés</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn btn-primary">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>VANSPLUS</h3>
+                <p>Votre boutique de mode en ligne de confiance depuis 2020</p>
+                
+                <!-- RÉSEAUX SOCIAUX -->
+                <div class="social-links-footer">
+                    <a href="https://wa.me/50940629428" target="_blank" class="social-btn whatsapp" title="WhatsApp">
+                        <span class="social-icon">💬</span>
+                        <span class="social-text">WhatsApp</span>
+                    </a>
+                    
+                    <a href="https://facebook.com/Evans Louis" target="_blank" class="social-btn facebook" title="Facebook">
+                        <span class="social-icon">📘</span>
+                        <span class="social-text">Facebook</span>
+                    </a>
+                    
+                    <a href="https://instagram.com/vans_positif" target="_blank" class="social-btn instagram" title="Instagram">
+                        <span class="social-icon">📷</span>
+                        <span class="social-text">Instagram</span>
+                    </a>
+                    
+                    <a href="https://twitter.com/vanspositif" target="_blank" class="social-btn twitter" title="Twitter">
+                        <span class="social-icon">🐦</span>
+                        <span class="social-text">Twitter</span>
+                    </a>
+                    
+                    <a href="mailto:ketvans28@gmail.com" class="social-btn email" title="Email">
+                        <span class="social-icon">📧</span>
+                        <span class="social-text">Email</span>
+                    </a>
+                    
+                    <a href="tel:+50940629428" class="social-btn phone" title="Téléphone">
+                        <span class="social-icon">📞</span>
+                        <span class="social-text">Appeler</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Autres sections du footer -->
+            <div class="footer-section">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="shop.html">Boutique</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 VANSPLUS. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

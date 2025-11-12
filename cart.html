@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANSPLUS - Mon Panier</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">VANSPLUS</a></h1>
+                </div>
+                
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="shop.html">Boutique</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-icons">
+                    <span class="icon">🔍</span>
+                    <span class="icon">❤️<span class="badge" id="wishlist-count">0</span></span>
+                    <span class="icon">👤</span>
+                    <a href="cart.html" class="icon active">
+                        🛒<span class="badge" id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Mon Panier</h1>
+            <p>Gérez vos articles avant de passer commande</p>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Items du panier -->
+                <div class="cart-items-container">
+                    <div id="cart-items">
+                        <!-- Les items seront ajoutés par JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Résumé de commande -->
+                <div class="cart-summary-container">
+                    <div class="cart-summary">
+                        <h3>📋 Résumé de la commande</h3>
+                        
+                        <div class="summary-row">
+                            <span>Sous-total</span>
+                            <span id="subtotal">0.00€</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Livraison</span>
+                            <span id="shipping" class="text-success">Gratuite</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>TVA (20%)</span>
+                            <span id="tax">0.00€</span>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="total">0.00€</span>
+                        </div>
+
+                        <!-- Code promo -->
+                        <div class="promo-section">
+                            <input type="text" id="promo-code" placeholder="Code promo">
+                            <button class="btn btn-secondary" id="apply-promo">Appliquer</button>
+                        </div>
+
+                        <a href="checkout.html" class="btn btn-primary btn-block">
+                            🛍️ Passer la commande
+                        </a>
+                        
+                        <a href="shop.html" class="btn btn-secondary btn-block">
+                            ← Continuer mes achats
+                        </a>
+
+                        <!-- Paiements acceptés -->
+                        <div class="payment-methods">
+                            <p>Paiements sécurisés acceptés:</p>
+                            <div class="payment-icons">
+                                <span>💳</span>
+                                <span>🏧</span>
+                                <span>📱</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produits recommandés -->
+    <section class="recommended-products">
+        <div class="container">
+            <h2 class="section-title">Vous pourriez aussi aimer</h2>
+            <div class="product-grid" id="recommended-products"></div>
+        </div>
+    </section>
+
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>VANSPLUS</h3>
+                <p>Votre boutique de mode en ligne de confiance depuis 2020</p>
+                
+                <!-- RÉSEAUX SOCIAUX -->
+                <div class="social-links-footer">
+                    <a href="https://wa.me/50940629428" target="_blank" class="social-btn whatsapp" title="WhatsApp">
+                        <span class="social-icon">💬</span>
+                        <span class="social-text">WhatsApp</span>
+                    </a>
+                    
+                    <a href="https://facebook.com/Evans Louis" target="_blank" class="social-btn facebook" title="Facebook">
+                        <span class="social-icon">📘</span>
+                        <span class="social-text">Facebook</span>
+                    </a>
+                    
+                    <a href="https://instagram.com/vans_positif" target="_blank" class="social-btn instagram" title="Instagram">
+                        <span class="social-icon">📷</span>
+                        <span class="social-text">Instagram</span>
+                    </a>
+                    
+                    <a href="https://twitter.com/vanspositif" target="_blank" class="social-btn twitter" title="Twitter">
+                        <span class="social-icon">🐦</span>
+                        <span class="social-text">Twitter</span>
+                    </a>
+                    
+                    <a href="mailto:ketvans28@gmail.com" class="social-btn email" title="Email">
+                        <span class="social-icon">📧</span>
+                        <span class="social-text">Email</span>
+                    </a>
+                    
+                    <a href="tel:+50940629428" class="social-btn phone" title="Téléphone">
+                        <span class="social-icon">📞</span>
+                        <span class="social-text">Appeler</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Autres sections du footer -->
+            <div class="footer-section">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="shop.html">Boutique</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 VANSPLUS. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANSPLUS - Boutique</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">VANSPLUS</a></h1>
+                </div>
+                
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="shop.html" class="active">Boutique</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-icons">
+                    <span class="icon">🔍</span>
+                    <span class="icon">❤️<span class="badge" id="wishlist-count">0</span></span>
+                    <span class="icon">👤</span>
+                    <a href="cart.html" class="icon">
+                        🛒<span class="badge" id="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Notre Boutique</h1>
+            <p>Découvrez tous nos produits</p>
+        </div>
+    </section>
+
+    <!-- Barre de recherche -->
+    <section class="search-bar-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Rechercher un produit...">
+                <button class="btn btn-primary">🔍 Rechercher</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Sidebar Filtres -->
+                <aside class="shop-sidebar">
+                    <div class="filter-section">
+                        <h3>🗂️ Catégories</h3>
+                        <div class="filter-list">
+                            <label>
+                                <input type="checkbox" name="category" value="all" checked>
+                                <span>Tous les produits</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="category" value="shoes">
+                                <span>Chaussures</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="category" value="clothes">
+                                <span>Vêtements</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="category" value="accessories">
+                                <span>Accessoires</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>💰 Prix</h3>
+                        <input type="range" min="0" max="500" value="500" id="price-range" class="price-slider">
+                        <div class="price-display">
+                            <span>0€</span>
+                            <span id="price-value">500€</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>📏 Taille</h3>
+                        <div class="size-options">
+                            <button class="size-btn">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                            <button class="size-btn">XXL</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>🎨 Couleur</h3>
+                        <div class="color-options">
+                            <button class="color-btn" style="background: black;" data-color="noir"></button>
+                            <button class="color-btn" style="background: white; border: 1px solid #ddd;" data-color="blanc"></button>
+                            <button class="color-btn" style="background: red;" data-color="rouge"></button>
+                            <button class="color-btn" style="background: blue;" data-color="bleu"></button>
+                            <button class="color-btn" style="background: green;" data-color="vert"></button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-secondary btn-block" id="reset-filters">Réinitialiser les filtres</button>
+                </aside>
+
+                <!-- Produits -->
+                <div class="shop-products">
+                    <div class="shop-header">
+                        <p><span id="product-count">0</span> produits trouvés</p>
+                        <select id="sort-select" class="sort-select">
+                            <option value="default">Trier par défaut</option>
+                            <option value="price-low">Prix croissant</option>
+                            <option value="price-high">Prix décroissant</option>
+                            <option value="name">Nom A-Z</option>
+                            <option value="newest">Plus récents</option>
+                        </select>
+                    </div>
+                    
+                    <div class="product-grid" id="all-products">
+                        <!-- Les produits seront ajoutés par JavaScript -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination" id="pagination">
+                        <button class="btn btn-secondary">← Précédent</button>
+                        <span>Page 1 sur 1</span>
+                        <button class="btn btn-secondary">Suivant →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>VANSPLUS</h3>
+                <p>Votre boutique de mode en ligne de confiance depuis 2020</p>
+                
+                <!-- RÉSEAUX SOCIAUX -->
+                <div class="social-links-footer">
+                    <a href="https://wa.me/50940629428" target="_blank" class="social-btn whatsapp" title="WhatsApp">
+                        <span class="social-icon">💬</span>
+                        <span class="social-text">WhatsApp</span>
+                    </a>
+                    
+                    <a href="https://facebook.com/Evans Louis" target="_blank" class="social-btn facebook" title="Facebook">
+                        <span class="social-icon">📘</span>
+                        <span class="social-text">Facebook</span>
+                    </a>
+                    
+                    <a href="https://instagram.com/vans_positif" target="_blank" class="social-btn instagram" title="Instagram">
+                        <span class="social-icon">📷</span>
+                        <span class="social-text">Instagram</span>
+                    </a>
+                    
+                    <a href="https://twitter.com/vanspositif" target="_blank" class="social-btn twitter" title="Twitter">
+                        <span class="social-icon">🐦</span>
+                        <span class="social-text">Twitter</span>
+                    </a>
+                    
+                    <a href="mailto:ketvans28@gmail.com" class="social-btn email" title="Email">
+                        <span class="social-icon">📧</span>
+                        <span class="social-text">Email</span>
+                    </a>
+                    
+                    <a href="tel:+50940629428" class="social-btn phone" title="Téléphone">
+                        <span class="social-icon">📞</span>
+                        <span class="social-text">Appeler</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Autres sections du footer -->
+            <div class="footer-section">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="shop.html">Boutique</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 VANSPLUS. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
