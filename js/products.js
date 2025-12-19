@@ -166,7 +166,7 @@ const products = [
         category: 'shoes',
         price: 139.99,
         oldPrice: 169.99,
-        image: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&q=80',
+        image: './images/Img1.jpg',
         rating: 4.7,
         reviews: 211,
         stock: 55,
