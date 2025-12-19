@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Commandes - VANSPLUS</title>
+    <title>Chat Support - VANSPLUS</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -22,38 +22,39 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
-                <div class="header-icons">
-                    <a href="cart.html" class="icon">
-                        🛒<span class="badge" id="cart-count">0</span>
-                    </a>
-                </div>
             </div>
         </div>
     </header>
 
     <section class="page-title">
         <div class="container">
-            <h1>📦 Mes Commandes</h1>
-            <p>Suivez l'état de vos commandes</p>
+            <h1>💬 Chat Support</h1>
+            <p>Discutez avec notre équipe</p>
         </div>
     </section>
 
-    <section class="orders-section">
+    <section class="chat-section">
         <div class="container">
-            <div class="orders-header">
-                <div class="orders-filter">
-                    <button class="filter-btn active" data-filter="all">Toutes</button>
-                    <button class="filter-btn" data-filter="pending">En cours</button>
-                    <button class="filter-btn" data-filter="shipped">Expédiées</button>
-                    <button class="filter-btn" data-filter="delivered">Livrées</button>
+            <div class="chat-container" id="chat-container">
+                <div class="chat-header">
+                    <div class="chat-agent">
+                        <div class="agent-avatar">👤</div>
+                        <div class="agent-info">
+                            <strong>Support VANSPLUS</strong>
+                            <span class="agent-status">🟢 En ligne</span>
+                        </div>
+                    </div>
+                    <button class="chat-close" onclick="window.location.href='index.html'">×</button>
                 </div>
-                <div class="orders-search">
-                    <input type="text" id="order-search" placeholder="Rechercher une commande...">
-                </div>
-            </div>
 
-            <div id="orders-list">
-                <!-- Les commandes seront ajoutées par JavaScript -->
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Messages seront ajoutés ici -->
+                </div>
+
+                <div class="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Tapez votre message...">
+                    <button class="send-btn" onclick="sendMessage()">📤</button>
+                </div>
             </div>
         </div>
     </section>
@@ -66,12 +67,11 @@
         </div>
     </footer>
 
-    <script src="js/cart.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/orders.js"></script>
+    <script src="js/chat.js"></script>
     <script src="js/theme.js"></script>
 
-    <!-- Widget Chat Flottant -->
+
+<!-- Widget Chat Flottant -->
 <div class="chat-widget" id="chat-widget">
     <button class="chat-widget-btn" onclick="toggleChatWidget()">
         💬

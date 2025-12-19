@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Commandes - VANSPLUS</title>
+    <title>Détail Produit - VANSPLUS</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <h1><a href="index.html">VANSPLUS</a></h1>
                 </div>
+                
                 <nav id="nav-menu">
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
@@ -22,53 +24,89 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
+
                 <div class="header-icons">
+                    <a href="#" class="icon">🔍</a>
+                    <a href="compare.html" class="icon">
+                        ⚖️<span class="badge" id="compare-count">0</span>
+                    </a>
+                    <a href="login.html" class="icon">👤</a>
                     <a href="cart.html" class="icon">
                         🛒<span class="badge" id="cart-count">0</span>
                     </a>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="page-title">
+    <!-- Product Detail -->
+    <section class="product-detail-section">
         <div class="container">
-            <h1>📦 Mes Commandes</h1>
-            <p>Suivez l'état de vos commandes</p>
-        </div>
-    </section>
-
-    <section class="orders-section">
-        <div class="container">
-            <div class="orders-header">
-                <div class="orders-filter">
-                    <button class="filter-btn active" data-filter="all">Toutes</button>
-                    <button class="filter-btn" data-filter="pending">En cours</button>
-                    <button class="filter-btn" data-filter="shipped">Expédiées</button>
-                    <button class="filter-btn" data-filter="delivered">Livrées</button>
-                </div>
-                <div class="orders-search">
-                    <input type="text" id="order-search" placeholder="Rechercher une commande...">
-                </div>
+            <div class="breadcrumb">
+                <a href="index.html">Accueil</a> / 
+                <a href="shop.html">Boutique</a> / 
+                <span id="product-breadcrumb">Produit</span>
             </div>
 
-            <div id="orders-list">
-                <!-- Les commandes seront ajoutées par JavaScript -->
+            <div class="product-detail" id="product-detail">
+                <!-- Le détail sera ajouté par JavaScript -->
             </div>
         </div>
     </section>
 
+    <!-- Section Avis -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">⭐ Avis clients</h2>
+            
+            <div class="reviews-summary">
+                <div class="rating-overview">
+                    <div class="overall-rating">
+                        <span class="rating-number" id="overall-rating">0</span>
+                        <div class="rating-stars" id="overall-stars"></div>
+                        <p id="reviews-count">0 avis</p>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary" onclick="showReviewForm()">
+                    ✍️ Écrire un avis
+                </button>
+            </div>
+            
+            <div class="reviews-list" id="reviews-list"></div>
+        </div>
+    </section>
+
+    <!-- Produits similaires -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Produits similaires</h2>
+            <div class="product-grid" id="similar-products"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VANSPLUS</h3>
+                    <p>Votre boutique de mode en ligne</p>
+                </div>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 VANSPLUS. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/orders.js"></script>
+    <script src="js/compare.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/product-detail.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
 
     <!-- Widget Chat Flottant -->

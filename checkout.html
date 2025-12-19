@@ -244,5 +244,37 @@
     <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/checkout.js"></script>
+    <script src="js/theme.js"></script>
+
+    <!-- Widget Chat Flottant -->
+<div class="chat-widget" id="chat-widget">
+    <button class="chat-widget-btn" onclick="toggleChatWidget()">
+        💬
+        <span class="chat-badge" id="chat-badge" style="display: none;">1</span>
+    </button>
+    
+    <div class="chat-widget-box" id="chat-widget-box" style="display: none;">
+        <div class="chat-widget-header">
+            <div>
+                <strong>Support VANSPLUS</strong>
+                <span class="status-online">🟢 En ligne</span>
+            </div>
+            <button onclick="toggleChatWidget()">−</button>
+        </div>
+        
+        <div class="chat-widget-messages" id="widget-messages">
+            <div class="bot-message-widget">
+                👋 Bonjour ! Comment puis-je vous aider ?
+            </div>
+        </div>
+        
+        <div class="chat-widget-input">
+            <input type="text" id="widget-input" placeholder="Tapez ici...">
+            <button onclick="sendWidgetMessage()">📤</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/chat-widget.js"></script>
 </body>
 </html>

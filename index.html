@@ -11,33 +11,35 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1><a href="index.html">VANSPLUS</a></h1>
-                </div>
-                
-                <nav id="nav-menu">
-                    <ul>
-                        <li><a href="index.html" class="active">Accueil</a></li>
-                        <li><a href="shop.html">Boutique</a></li>
-                        <li><a href="about.html">À Propos</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <h1><a href="index.html">VANSPLUS</a></h1>
+            </div>
+            
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="shop.html">Boutique</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-                <div class="header-icons">
-                    <span class="icon">🔍</span>
-                    <span class="icon">❤️<span class="badge" id="wishlist-count">0</span></span>
-                    <span class="icon">👤</span>
-                    <a href="cart.html" class="icon">
-                        🛒<span class="badge" id="cart-count">0</span>
-                    </a>
-                    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-                </div>
+            <div class="header-icons">
+                <a href="#" class="icon" title="Recherche">🔍</a>
+                <a href="compare.html" class="icon" title="Comparateur">
+                    ⚖️<span class="badge" id="compare-count">0</span>
+                </a>
+                <a href="login.html" class="icon" title="Compte">👤</a>
+                <a href="cart.html" class="icon" title="Panier">
+                    🛒<span class="badge" id="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -183,5 +185,37 @@
     <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+
+    <!-- Widget Chat Flottant -->
+<div class="chat-widget" id="chat-widget">
+    <button class="chat-widget-btn" onclick="toggleChatWidget()">
+        💬
+        <span class="chat-badge" id="chat-badge" style="display: none;">1</span>
+    </button>
+    
+    <div class="chat-widget-box" id="chat-widget-box" style="display: none;">
+        <div class="chat-widget-header">
+            <div>
+                <strong>Support VANSPLUS</strong>
+                <span class="status-online">🟢 En ligne</span>
+            </div>
+            <button onclick="toggleChatWidget()">−</button>
+        </div>
+        
+        <div class="chat-widget-messages" id="widget-messages">
+            <div class="bot-message-widget">
+                👋 Bonjour ! Comment puis-je vous aider ?
+            </div>
+        </div>
+        
+        <div class="chat-widget-input">
+            <input type="text" id="widget-input" placeholder="Tapez ici...">
+            <button onclick="sendWidgetMessage()">📤</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/chat-widget.js"></script>
 </body>
 </html>

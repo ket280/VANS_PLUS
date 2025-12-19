@@ -2061,3 +2061,1060 @@ footer {
         padding: 30px;
     }
 }
+
+/* ================================
+   MODE SOMBRE
+   ================================ */
+
+:root {
+    --primary-color: #6366F1;
+    --secondary-color: #EC4899;
+    --dark-color: #1F2937;
+    --light-color: #F9FAFB;
+    --text-color: #374151;
+    --border-color: #E5E7EB;
+    --bg-color: #FFFFFF;
+    --card-bg: #FFFFFF;
+}
+
+/* Variables pour le mode sombre */
+[data-theme="dark"] {
+    --dark-color: #F9FAFB;
+    --light-color: #1F2937;
+    --text-color: #E5E7EB;
+    --border-color: #374151;
+    --bg-color: #111827;
+    --card-bg: #1F2937;
+}
+
+/* Application des couleurs */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.product-card,
+.service-card,
+.cart-summary,
+.auth-box,
+.order-card {
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+header,
+footer {
+    background: var(--card-bg);
+}
+
+/* Bouton de toggle du mode sombre */
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(20deg);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Animation du toggle */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.theme-toggle.switching {
+    animation: rotate 0.5s ease;
+}
+
+/* ================================
+   COMPARATEUR
+   ================================ */
+
+.compare-section {
+    padding: 60px 20px;
+    min-height: 70vh;
+}
+
+.empty-compare {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--card-bg);
+    border-radius: 20px;
+}
+
+.empty-compare .empty-icon {
+    font-size: 100px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.compare-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 15px;
+}
+
+.compare-table {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow-x: auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.compare-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.compare-table th,
+.compare-table td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.compare-table th {
+    background: var(--light-color);
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.compare-table th:first-child,
+.compare-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    background: var(--light-color);
+    position: sticky;
+    left: 0;
+    z-index: 5;
+}
+
+.compare-product-header {
+    position: relative;
+    padding: 20px;
+}
+
+.compare-product-header .product-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    background: var(--light-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.compare-product-header .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remove-compare-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--error-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.remove-compare-btn:hover {
+    transform: scale(1.1);
+}
+
+.compare-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.compare-actions td {
+    padding: 30px 20px;
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* Responsive Compare */
+@media (max-width: 768px) {
+    .compare-table {
+        font-size: 14px;
+    }
+    
+    .compare-table th,
+    .compare-table td {
+        padding: 10px;
+    }
+    
+    .compare-product-header .product-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .compare-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Bouton Comparer */
+.compare-btn {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.compare-btn:hover {
+    transform: scale(1.1);
+    background: var(--primary-color);
+}
+
+/* ================================
+   PAGE DÉTAIL PRODUIT
+   ================================ */
+
+.product-detail-section {
+    padding: 60px 20px;
+}
+
+.breadcrumb {
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.product-images {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.main-image {
+    position: relative;
+    background: var(--light-color);
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-badge-large {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--error-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.product-info-detail h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.product-rating-detail {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.product-price-detail {
+    margin-bottom: 25px;
+}
+
+.price-large {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.old-price-large {
+    font-size: 28px;
+    text-decoration: line-through;
+    color: #9CA3AF;
+    margin-right: 15px;
+}
+
+.product-description-detail {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.product-stock {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.in-stock {
+    color: var(--success-color);
+}
+
+.out-stock {
+    color: var(--error-color);
+}
+
+.product-options {
+    margin-bottom: 30px;
+}
+
+.product-options label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.color-options-detail,
+.size-options-detail {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.color-option,
+.size-option {
+    padding: 12px 24px;
+    border: 2px solid var(--border-color);
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.color-option:hover,
+.size-option:hover,
+.color-option.active,
+.size-option.active {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.product-quantity {
+    margin-bottom: 30px;
+}
+
+.product-quantity label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.quantity-controls-large {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: fit-content;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.quantity-controls-large button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: var(--light-color);
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quantity-controls-large button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.quantity-controls-large input {
+    width: 80px;
+    height: 50px;
+    border: none;
+    border-left: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.product-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.product-actions .btn {
+    flex: 1;
+    min-width: 200px;
+}
+
+.product-meta {
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.product-meta p {
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.product-share {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product-share button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: var(--light-color);
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-share button:hover {
+    background: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Lien produit */
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-link:hover .product-name {
+    color: var(--primary-color);
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: 60px 20px;
+    background: var(--light-color);
+}
+
+.reviews-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.rating-overview {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.overall-rating {
+    text-align: center;
+}
+
+.rating-number {
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.overall-rating .rating-stars {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.review-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.review-date {
+    color: #6B7280;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.review-rating {
+    font-size: 20px;
+}
+
+.review-text {
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.review-helpful {
+    display: flex;
+    gap: 15px;
+}
+
+.review-helpful button {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.review-helpful button:hover {
+    background: var(--light-color);
+    border-color: var(--primary-color);
+}
+
+.no-reviews {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--card-bg);
+    border-radius: 15px;
+}
+
+/* Star Rating Input */
+.star-rating-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.star-rating-input input {
+    display: none;
+}
+
+.star-rating-input label {
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.star-rating-input label:hover,
+.star-rating-input input:checked ~ label {
+    transform: scale(1.2);
+}
+
+/* Responsive Product Detail */
+@media (max-width: 968px) {
+    .product-detail {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .product-images {
+        position: static;
+    }
+    
+    .product-info-detail h1 {
+        font-size: 28px;
+    }
+    
+    .price-large {
+        font-size: 32px;
+    }
+    
+    .product-actions {
+        flex-direction: column;
+    }
+    
+    .product-actions .btn {
+        min-width: 100%;
+    }
+    
+    .reviews-summary {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* ================================
+   CHAT SYSTEM
+   ================================ */
+
+.chat-section {
+    padding: 60px 20px;
+    min-height: 80vh;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+.chat-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-agent {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.agent-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.agent-info strong {
+    display: block;
+}
+
+.agent-status {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.chat-close {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-close:hover {
+    background: rgba(255,255,255,0.3);
+    transform: rotate(90deg);
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: var(--light-color);
+}
+
+.message {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    animation: messageSlide 0.3s ease;
+}
+
+@keyframes messageSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.message-content {
+    max-width: 70%;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.user-message {
+    flex-direction: row-reverse;
+}
+
+.user-message .message-content {
+    background: var(--primary-color);
+    color: white;
+}
+
+.message-time {
+    display: block;
+    font-size: 11px;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+.quick-replies {
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+}
+
+.quick-replies-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.quick-reply-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    background: var(--light-color);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.quick-reply-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+.chat-input-container input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.chat-input-container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.send-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Widget Chat Flottant */
+.chat-widget {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    z-index: 999;
+}
+
+.chat-widget-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.chat-widget-btn:hover {
+    transform: scale(1.1);
+}
+
+.chat-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--error-color);
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.chat-widget-box {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 350px;
+    height: 500px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-widget-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-widget-header button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.status-online {
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+}
+
+.chat-widget-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background: var(--light-color);
+}
+
+.bot-message-widget,
+.user-message-widget {
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    animation: messageSlide 0.3s ease;
+}
+
+.bot-message-widget {
+    background: white;
+    color: var(--text-color);
+}
+
+.user-message-widget {
+    background: var(--primary-color);
+    color: white;
+    margin-left: auto;
+}
+
+.chat-widget-input {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+.chat-widget-input input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.chat-widget-input input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.chat-widget-input button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive Chat */
+@media (max-width: 768px) {
+    .chat-container {
+        height: calc(100vh - 200px);
+    }
+    
+    .chat-widget-box {
+        width: calc(100vw - 40px);
+        right: -10px;
+    }
+    
+    .chat-widget {
+        right: 20px;
+    }
+}
